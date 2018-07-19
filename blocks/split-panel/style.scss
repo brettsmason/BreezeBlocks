@@ -1,0 +1,34 @@
+.wp-block-breezeblocks-split-panel {
+
+	@media screen and (min-width: 800px) {
+		display: flex;
+	}
+
+	&__image {
+		max-width: 100%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		position: relative;
+		min-height: 400px;
+		flex: 0 0 auto;
+		width: 100%;
+
+		@media screen and (min-width: 800px) {
+			width: 50%;
+			min-height: 550px;
+		}
+	}
+
+	&__box {
+		flex: 1;
+		padding: 4rem;
+		display: flex;
+		align-items: center;
+	}
+
+	&--reversed &__image {
+		order: 2;
+	}
+}

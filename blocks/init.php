@@ -22,7 +22,7 @@ add_action( 'enqueue_block_editor_assets', function() {
 		'breezeblocks-style',
 		plugins_url( 'dist/css/blocks.editor.css', dirname( __DIR__ ) ),
         [ 'wp-blocks' ],
-        filemtime( plugin_dir_path( __DIR__ ) . 'dist/css/blocks.style.css' )
+        filemtime( plugin_dir_path( __DIR__ ) . 'dist/css/blocks.editor.css' )
 	);
 }, 5 );
 

@@ -107,13 +107,15 @@ registerBlockType(
             const classes = classnames( className, {
                 [ `align${ align }` ]: align,
                 'has-background': backgroundColor.value,
-                [ textClass ]: textClass,
                 [ backgroundClass ]: backgroundClass,
+            } );
+            const contentClasses = classnames( 'wp-block-breezeblocks-container__content', {
+                [ textClass ]: textClass
             } );
 
             return (
                 <div className={ classes }>
-                    <div className={ 'wp-block-breezeblocks-container__content' }>
+                    <div className={ contentClasses }>
                         <InnerBlocks.Content />
                     </div>
 			    </div>

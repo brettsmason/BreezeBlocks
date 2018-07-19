@@ -1,5 +1,36 @@
 .wp-block-breezeblocks-container {
   padding-top: 5rem;
   padding-bottom: 5rem; }
-  .wp-block-breezeblocks-container__content {
-    color: inherit; }
+@media screen and (min-width: 800px) {
+  .wp-block-breezeblocks-split-panel {
+    display: -ms-flexbox;
+    display: flex; } }
+
+.wp-block-breezeblocks-split-panel__image {
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  position: relative;
+  min-height: 400px;
+  -ms-flex: 0 0 auto;
+      flex: 0 0 auto;
+  width: 100%; }
+  @media screen and (min-width: 800px) {
+    .wp-block-breezeblocks-split-panel__image {
+      width: 50%;
+      min-height: 550px; } }
+
+.wp-block-breezeblocks-split-panel__box {
+  -ms-flex: 1;
+      flex: 1;
+  padding: 4rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.wp-block-breezeblocks-split-panel--reversed .wp-block-breezeblocks-split-panel__image {
+  -ms-flex-order: 2;
+      order: 2; }
