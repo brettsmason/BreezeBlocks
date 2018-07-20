@@ -29,7 +29,7 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-breezeblocks-block-split-panel .split-panel__image {
+.wp-block-breezeblocks-split-panel .split-panel__image {
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -37,5 +37,6 @@
   -ms-flex-pack: center;
       justify-content: center; }
 
-.wp-block-breezeblocks-block-split-panel .components-placeholder {
+.wp-block-breezeblocks-split-panel .components-placeholder {
+  background-color: #f3f3f4;
   height: 100%; }

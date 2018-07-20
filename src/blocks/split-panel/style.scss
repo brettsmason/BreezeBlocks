@@ -11,19 +11,19 @@
 	}
 
 	&__image {
-		max-width: 100%;
-		background-size: cover;
-		background-repeat: no-repeat;
 		background-position: center;
-		text-align: center;
-		position: relative;
-		min-height: 400px;
+		background-repeat: no-repeat;
+		background-size: cover;
 		flex: 0 0 auto;
+		max-width: 100%;
+		min-height: 400px;
+		position: relative;
+		text-align: center;
 		width: 100%;
 
 		@media screen and (min-width: 800px) {
-			width: 50%;
 			min-height: 550px;
+			width: 50%;
 		}
 	}
 
@@ -34,7 +34,7 @@
 		padding: 4rem;
 	}
 
-	&--reversed &__image {
-		order: 2;
+	&--reversed {
+		flex-direction: row-reverse;
 	}
 }
