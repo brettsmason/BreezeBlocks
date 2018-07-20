@@ -1,4 +1,10 @@
-.wp-block-breezeblocks-split-panel {
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+.split-panel {
 
 	@media screen and (min-width: 800px) {
 		display: flex;
@@ -22,10 +28,10 @@
 	}
 
 	&__box {
+		align-items: center;
+		display: flex;
 		flex: 1;
 		padding: 4rem;
-		display: flex;
-		align-items: center;
 	}
 
 	&--reversed &__image {

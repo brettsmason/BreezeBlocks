@@ -1,12 +1,29 @@
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
 .wp-block-breezeblocks-container {
   padding-top: 5rem;
   padding-bottom: 5rem; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
 @media screen and (min-width: 800px) {
-  .wp-block-breezeblocks-split-panel {
+  .split-panel {
     display: -ms-flexbox;
     display: flex; } }
 
-.wp-block-breezeblocks-split-panel__image {
+.split-panel__image {
   max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
@@ -18,19 +35,19 @@
       flex: 0 0 auto;
   width: 100%; }
   @media screen and (min-width: 800px) {
-    .wp-block-breezeblocks-split-panel__image {
+    .split-panel__image {
       width: 50%;
       min-height: 550px; } }
 
-.wp-block-breezeblocks-split-panel__box {
-  -ms-flex: 1;
-      flex: 1;
-  padding: 4rem;
+.split-panel__box {
+  -ms-flex-align: center;
+      align-items: center;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center; }
+  -ms-flex: 1;
+      flex: 1;
+  padding: 4rem; }
 
-.wp-block-breezeblocks-split-panel--reversed .wp-block-breezeblocks-split-panel__image {
+.split-panel--reversed .split-panel__image {
   -ms-flex-order: 2;
       order: 2; }

@@ -12,8 +12,12 @@
  * @package breezeBlocks
  */
 
-//  Exit if accessed directly.
-defined('ABSPATH') || exit;
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
-// Initialize blocks.
-include plugin_dir_path( __FILE__ ) . '/blocks/init.php';
+/**
+ * Block Initializer.
+ */
+require_once plugin_dir_path( __FILE__ ) . 'src/init.php';

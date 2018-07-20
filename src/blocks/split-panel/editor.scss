@@ -1,0 +1,19 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-breezeblocks-block-split-panel {
+
+	.split-panel__image {
+		align-items: center;
+		display: flex;
+		justify-content: center;
+	}
+
+	.components-placeholder {
+		height: 100%;
+	}
+}
