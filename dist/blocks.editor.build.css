@@ -40,3 +40,24 @@
 .wp-block-breezeblocks-split-panel .components-placeholder {
   background-color: #f3f3f4;
   height: 100%; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+.wp-block-breezeblocks-tile__content {
+  color: inherit; }
+  .wp-block-breezeblocks-tile__content .wp-block-heading h2,
+  .wp-block-breezeblocks-tile__content .wp-block-heading h3,
+  .wp-block-breezeblocks-tile__content .wp-block-heading h4,
+  .wp-block-breezeblocks-tile__content .wp-block-heading h5,
+  .wp-block-breezeblocks-tile__content .wp-block-heading h6,
+  .wp-block-breezeblocks-tile__content p {
+    color: inherit; }

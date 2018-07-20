@@ -1,0 +1,22 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+.wp-block-breezeblocks-tile {
+
+	&__content {
+		color: inherit;
+
+		.wp-block-heading h2,
+		.wp-block-heading h3,
+		.wp-block-heading h4,
+		.wp-block-heading h5,
+		.wp-block-heading h6,
+		p {
+			color: inherit;
+		}
+	}
+}

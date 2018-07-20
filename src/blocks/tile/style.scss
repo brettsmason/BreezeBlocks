@@ -1,0 +1,73 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+$ratios: (
+	"2by1": (2:1),
+	"4by3": (4:3),
+	"16by9": (16:9)
+);
+
+.wp-block-breezeblocks-tile {
+	position: relative;
+	display: block;
+	padding: 1.5rem;
+
+	// Defaults to square.
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		padding-bottom: 100%; /* [1] */
+	}
+
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	&__link {
+		color: inherit;
+		display: block;
+		width: 100%;
+		height: 100%;
+
+		&:hover {
+			color: inherit;
+		}
+	}
+
+	&__content,
+	& > iframe,
+	& > embed,
+	& > object {
+		position: absolute;
+		top:    0;
+		bottom: 0;
+		left:   0;
+		height: 100%;
+		width:  100%;
+	}
+
+	@each $ratio-name, $ratio-value in $ratios {
+
+		@each $antecedent, $consequent in $ratio-value {
+
+			@if (type-of($antecedent) != number) {
+				@error "`#{$antecedent}` needs to be a number.";
+			}
+
+			@if (type-of($consequent) != number) {
+				@error "`#{$consequent}` needs to be a number.";
+			}
+
+			&.is-ratio-#{$ratio-name}:before {
+				padding-bottom: ($consequent/$antecedent) * 100%;
+			}
+		}
+	}
+}

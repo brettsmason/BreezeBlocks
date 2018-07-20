@@ -11,3 +11,4 @@
 
 import './blocks/container/block.js';
 import './blocks/split-panel/block.js';
+import './blocks/tile/block.js';
