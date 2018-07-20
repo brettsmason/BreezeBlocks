@@ -54,6 +54,10 @@ registerBlockType( 'breezeblocks/tile', {
 		__( 'Tile' ),
 	],
 	attributes: {
+		backgroundType: {
+			type: 'string',
+			default: 'color',
+		},
 		link: {
 			type: 'string',
 			source: 'attribute',
@@ -88,7 +92,7 @@ registerBlockType( 'breezeblocks/tile', {
 	 */
 	edit: withColors( 'backgroundColor', { textColor: 'color' } )(
 		function( props ) {
-			const { attributes: { url, id, link, ratio }, className, setAttributes, backgroundColor, textColor, setBackgroundColor, setTextColor, isSelected } = props;
+			const { attributes: { url, id, link, ratio, backgroundType }, className, setAttributes, backgroundColor, textColor, setBackgroundColor, setTextColor, isSelected } = props;
 
 			const classes = classnames( className, {
 				'has-background': backgroundColor.value,
@@ -108,18 +112,31 @@ registerBlockType( 'breezeblocks/tile', {
 			return (
 				<Fragment>
 					<InspectorControls>
+						<PanelBody title={ __( 'Background Settings' ) }>
+							<SelectControl
+								label={ __( 'Background Type' ) }
+								value={ backgroundType }
+								options={ [
+									{ value: 'color', label: __( 'Color' ) },
+									{ value: 'image', label: __( 'Image' ) },
+								] }
+								onChange={ backgroundType => setAttributes( { backgroundType } ) }
+							/>
+						</PanelBody>
+
 						<PanelColor
 							colorValue={ backgroundColor.value }
 							title={ __( 'Background Color' ) }
 							onChange={ setBackgroundColor }
 						/>
+
 						<PanelColor
 							colorValue={ textColor.value }
 							title={ __( 'Text Color' ) }
 							onChange={ setTextColor }
 						/>
 
-						<PanelBody>
+						<PanelBody title={ __( 'Layout Settings' ) }>
 							<SelectControl
 								label={ __( 'Ratio' ) }
 								value={ ratio }
