@@ -70,9 +70,11 @@ registerBlockType( 'breezeblocks/split-panel', {
 		},
 		backgroundColor: {
 			type: 'string',
+			default: '',
 		},
 		textColor: {
 			type: 'string',
+			default: '',
 		},
 	},
 
