@@ -10,13 +10,6 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-cgb-block-breezeblocks {
-  background: #bada55;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
 /**
  * #.# Common SCSS
  *
@@ -73,10 +66,21 @@
  * CSS for just Backend enqueued after style.scss
  * which makes it higher in priority.
  */
-.wp-block-cgb-block-breezeblocks {
-  background: #bada55;
-  border: 0.2rem solid #292929;
-  color: #292929;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem; }
+.wp-block-breezeblocks-button-group {
+  display: block; }
+  .wp-block-breezeblocks-button-group .editor-block-list__layout {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .wp-block-breezeblocks-button-group.is-aligned-left .editor-block-list__layout {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .wp-block-breezeblocks-button-group.is-aligned-center .editor-block-list__layout {
+    -ms-flex-pack: center;
+        justify-content: center; }
+  .wp-block-breezeblocks-button-group.is-aligned-right .editor-block-list__layout {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }
+  .wp-block-breezeblocks-button-group .editor-block-list__block {
+    margin: 0; }

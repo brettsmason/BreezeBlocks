@@ -5,11 +5,27 @@
  * which makes it higher in priority.
  */
 
-.wp-block-cgb-block-breezeblocks  {
-  background: $green;
-  border: 0.2rem solid $black;
-  color: $black;
-  margin: 0 auto;
-  max-width: 740px;
-  padding: 2rem;
+.wp-block-breezeblocks-button-group {
+	display: block;
+
+	.editor-block-list__layout {
+		display: flex;
+		justify-content: center;
+	}
+
+	&.is-aligned-left .editor-block-list__layout {
+		justify-content: flex-start;
+	}
+
+	&.is-aligned-center .editor-block-list__layout {
+		justify-content: center;
+	}
+
+	&.is-aligned-right .editor-block-list__layout {
+		justify-content: flex-end;
+	}
+
+	.editor-block-list__block {
+		margin: 0;
+	}
 }

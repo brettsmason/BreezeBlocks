@@ -54,13 +54,6 @@ registerBlockType( 'breezeblocks/button-group', {
 		},
 	},
 
-	getEditWrapperProps( attributes ) {
-		const { align } = attributes;
-		if ( 'wide' === align || 'full' === align ) {
-			return { 'data-align': align };
-		}
-	},
-
 	/**
 	 * The edit function describes the structure of your block in the context of the editor.
 	 * This represents what the editor will render when the block is used.
@@ -73,7 +66,7 @@ registerBlockType( 'breezeblocks/button-group', {
 		const { attributes: { align }, className, setAttributes } = props;
 
 		const classes = classnames( className, {
-			[ `is-align-${ align }` ]: align,
+			[ `is-aligned-${ align }` ]: align,
 		} );
 
 		return (
@@ -87,14 +80,14 @@ registerBlockType( 'breezeblocks/button-group', {
 				</BlockControls>
 
 				<div className={ classes }>
-				<InnerBlocks
-					allowedBlocks={ [ 'core/button' ] }
-					template={ [
-						[ 'core/button' ],
-						[ 'core/button' ],
-					] }
-					templateLock={ false }
-				/>
+					<InnerBlocks
+						allowedBlocks={ [ 'core/button' ] }
+						template={ [
+							[ 'core/button' ],
+							[ 'core/button' ],
+						] }
+						templateLock={ false }
+					/>
 				</div>
 			</Fragment>
 		);
@@ -111,7 +104,7 @@ registerBlockType( 'breezeblocks/button-group', {
 	save: function( props ) {
 		const { attributes: { align }, className } = props;
 		const classes = classnames( className, {
-			[ `is-align-${ align }` ]: align,
+			[ `is-aligned-${ align }` ]: align,
 		} );
 
 		return (

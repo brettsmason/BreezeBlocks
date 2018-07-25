@@ -110,6 +110,14 @@
  * Can include things like variables and mixins
  * that are used across the project.
 */
-.wp-block-breezeblocks-container {
-  padding-top: 5rem;
-  padding-bottom: 5rem; }
+.wp-block-breezeblocks-button-group {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  .wp-block-breezeblocks-button-group.is-aligned-left {
+    -ms-flex-pack: start;
+        justify-content: flex-start; }
+  .wp-block-breezeblocks-button-group.is-aligned-right {
+    -ms-flex-pack: end;
+        justify-content: flex-end; }

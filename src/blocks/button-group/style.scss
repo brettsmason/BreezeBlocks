@@ -1,4 +1,12 @@
-.wp-block-breezeblocks-container {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
+.wp-block-breezeblocks-button-group {
+	display: flex;
+	justify-content: center;
+
+	&.is-aligned-left {
+		justify-content: flex-start;
+	}
+
+	&.is-aligned-right {
+		justify-content: flex-end;
+	}
 }
