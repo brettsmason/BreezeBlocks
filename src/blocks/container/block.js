@@ -54,9 +54,11 @@ registerBlockType( 'breezeblocks/container', {
 		},
 		backgroundColor: {
 			type: 'string',
+			default: '',
 		},
 		textColor: {
 			type: 'string',
+			default: '',
 		},
 	},
 

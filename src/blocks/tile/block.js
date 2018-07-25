@@ -76,9 +76,11 @@ registerBlockType( 'breezeblocks/tile', {
 		},
 		backgroundColor: {
 			type: 'string',
+			default: '',
 		},
 		textColor: {
 			type: 'string',
+			default: '',
 		},
 	},
 
