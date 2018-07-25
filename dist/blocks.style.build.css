@@ -104,3 +104,12 @@
     padding-bottom: 75%; }
   .wp-block-breezeblocks-tile.is-ratio-16by9:before {
     padding-bottom: 56.25%; }
+/**
+ * #.# Common SCSS
+ *
+ * Can include things like variables and mixins
+ * that are used across the project.
+*/
+.wp-block-breezeblocks-container {
+  padding-top: 5rem;
+  padding-bottom: 5rem; }
