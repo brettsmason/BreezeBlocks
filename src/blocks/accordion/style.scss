@@ -1,0 +1,61 @@
+/**
+ * #.# Styles
+ *
+ * CSS for both Frontend+Backend.
+ */
+
+ .wp-block-breezeblocks-accordion {
+
+	.accordion__trigger {
+		border: 1px solid #f2f2f2;
+		padding: 1rem;
+		margin: 0;
+		width: 100%;
+		text-align: left;
+		background-color: #f2f2f2;
+		position: relative;
+
+		&::after {
+			content: '';
+			border: solid #000;
+			border-width: 0 2px 2px 0;
+			height: .5rem;
+			pointer-events: none;
+			position: absolute;
+			right: 1em;
+			top: 50%;
+			transform: translateY(-60%) rotate(45deg);
+			width: .5rem;
+		}
+
+		&[aria-expanded="true"]::after {
+			transform: translateY(-50%) rotate(-135deg);
+		}
+	}
+
+	.accordion__panel {
+		margin: 0;
+		border: 1px solid #f2f2f2;
+	}
+
+	.accordion__panel-inner {
+		padding: 1rem;
+
+		& > :last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.badger-accordion__panel {
+    max-height: 75vh;
+    overflow: hidden;
+}
+
+.badger-accordion__panel.-ba-is-hidden {
+    max-height: 0 !important;
+}
+
+.badger-accordion--initalised .badger-accordion__panel {
+    transition: all ease-in-out 0.2s;
+}

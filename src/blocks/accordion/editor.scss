@@ -1,0 +1,19 @@
+/**
+ * #.# Editor Styles
+ *
+ * CSS for just Backend enqueued after style.scss
+ * which makes it higher in priority.
+ */
+
+ .wp-block-breezeblocks-accordion {
+
+	.editor-block-list__block .accordion__panel {
+		display: none;
+	}
+
+	.is-selected .accordion__panel,
+	.is-selected-parent .accordion__panel,
+	.is-typing .accordion__panel {
+		display: block;
+	}
+}
